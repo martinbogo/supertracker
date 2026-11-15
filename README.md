@@ -22,6 +22,12 @@ ADSBHub station key) are stored in the macOS Keychain under the service name `ad
 - `adsb_data/build_navdata.py` builds `navdata.json` from the FAA NASR CSV files
 - `adsb_data/build_world_airports.py` builds `world_airports.json` from OurAirports `airports.csv`
 
+## Tests
+
+    ./adsb_venv/bin/python tests/test_hub_downlink.py     # shared feed receiver, against a local mock server only
+    python3 swim_routes.py --test DIR                      # route resolver, with a folder of sample FAA messages
+    python3 sbs_check.py --seconds 60                      # audits the running map's SBS output
+
 ## Sharing and receiving
 
 Both are off until you switch them on in Settings. Sharing sends your checked aircraft data to data.adsbhub.org:5001. Receiving reads
