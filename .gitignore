@@ -1,0 +1,17 @@
+# local data and settings: positions, flight log, settings, caches, built nav data
+adsb_data/*.sqlite*
+adsb_data/config.json*
+adsb_data/plans_cache.json*
+adsb_data/navdata.json
+adsb_data/world_airports.json
+adsb_data/dl_airports/
+# virtual environment and Python noise
+adsb_venv/
+venv/
+__pycache__/
+*.pyc
+# plain text credential files must never be committed
+.swim_credentials
+.adsbhub_credentials
+*.env
+.DS_Store
